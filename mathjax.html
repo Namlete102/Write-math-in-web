@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- mathjax -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Mathjax</title>
+</head>
+<body>
+
+<a href="./index.html">Trang chủ</a>
+<a>[Mathjax]</a>    
+<a href="./katex.html">KaTeX</a>
+
+<h1>Viết toán học trên web với mathjax:</h1>
+
+<b>Inline math:</b>
+
+<p>Nghiệm của phương trình bậc hai một nhất khi \(\Delta > 0\): \(x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</p>
+
+<b>Display math:</b>
+
+$$
+z^2 = x^2 + y^2
+$$
+
+\begin{equation}
+    S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+        = \frac{1}{n}\sum_{i}^{n} X_i\
+    \label{eq:1}
+\end{equation} 
+
+$$
+\begin{equation} \tag{1.1}
+E = m \cdot c^2
+\end{equation}
+$$
+
+Tham chiếu chéo \eqref{eq:1}
+
+<script>
+    //   Mathjax
+
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+
+    MathJax = {
+      tex: {
+        tags: 'ams'  // or 'all'
+      }
+    };
+    
+    function zoomOut() {
+      let img = document.getElementById("myImage");
+        img.style.width = (img.clientWidth - 50) + "px"; // Reduces width by 50px
+      }
+</script>
+</body>
+</html>
